@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DEMO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 style="text-align: center">GESTION DE ESTUDIANTES</h2>
+        <hr>
+        <form>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="masv">Código estudiantil:</label>
+                        <input type="text" class="form-control" id="masv" placeholder="Enter username" name="masv">
+                        <!-- <div class="valid-feedback">Valid.</div> -->
+                        <div class="invalid-feedback" id="masv_err">La identificación del estudiante no se puede dejar
+                            en blanco.</div>
+                        <div class="invalid-feedback" id="masv2_err">El ID de estudiante ya existe.</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="ho">Apellido:</label>
+                        <input type="text" class="form-control" id="ho" placeholder="Enter username" name="ho">
+                        <!-- <div class="valid-feedback">Valid.</div> -->
+                        <div class="invalid-feedback">Por favor introduce tu primer nombre y apellido.</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="ten">Nombre:</label>
+                        <input type="text" class="form-control" id="ten" placeholder="Enter username" name="ten">
+                        <!-- <div class="valid-feedback">Valid.</div> -->
+                        <div class="invalid-feedback">por favor, escriba su nombre.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="lop">Clase:</label>
+                        <select class="form-control" id="lop" name="lop">
+                            <option value="">--Seleccionar clase--</option>
+                            <option value="DST20">DST20</option>
+                            <option value="DST21">DCT21</option>
+                            <option value="DST22">DST22</option>
+                        </select>
+                        <div class="invalid-feedback">Aún no has seleccionado una clase.</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" class="form-control" id="email" placeholder="Enter email" name="uname">
+                        <!-- <div class="valid-feedback">Valid.</div> -->
+                        <div class="invalid-feedback" id="email_err">Por favor introduzca su correo electrónico.</div>
+                        <div class="invalid-feedback" id="email2_err">Email inválido.</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <label for="email">Sexo:</label>
+                    <div class="form-group">
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gioitinh" id="inlineRadio1"
+                                value="Nam" />
+                            <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gioitinh" id="inlineRadio2" value="Nữ" />
+                            <label class="form-check-label" for="inlineRadio2">Femenino</label>
+                        </div>
+
+                        <div class="invalid-feedback" id="gioitinh_err">Aún no has elegido tu género.</div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <label for="email">Tipos de certificados disponibles:</label>
+                    <div class="form-group">
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="chkNN" value="Idioma extranjero">
+                            <label class="form-check-label" for="chkNN">Idioma extranjero</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="chkTH"
+                                value="Tecnologías de la información">
+                            <label class="form-check-label" for="chkTH">Tecnologías de la información</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="chkQPAN" value="seguridad de defensa">
+                            <label class="form-check-label" for="chkQPAN">seguridad de defensa</label>
+                        </div>
+
+                        <div class="invalid-feedback" id="chungchung_err">No ha seleccionado un certificado.</div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="btnSave" class="btn btn-primary">Agregar nuevo</button>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Código estudiantil</th>
+                        <th>Nombre y apellido</th>
+                        <th>Clase</th>
+                        <th>Email</th>
+                        <th>Sexo</th>
+                        <th>Idioma extranjero</th>
+                        <th>Tecnologías de la información</th>
+                        <th>QPAN</th>
+                        <th>Operación</th>
+                    </tr>
+                </thead>
+                <tbody id="display">
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <script src="demo.js"></script>
+</body>
+
+</html>
